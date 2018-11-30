@@ -36,6 +36,6 @@ models.sequelize.sync().then(function() {
   app.listen(process.env.PORT, function() {
     console.log('Express server listening on port 808');
   });
-//});
+});
 
 console.log('Jul ma religion')
