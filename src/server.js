@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 // Add a bit of logging
 app.use(morgan('short'))
-
+/*
 // Get all the users defined
 app.get('/', function (req, res) {
   models.User.findAll()
@@ -18,6 +18,7 @@ app.get('/', function (req, res) {
       res.json(users)
     })
 })
+console.log('Jul le Sang')
 
 // Add a new user to the database
 app.post('/', function(req, res) {
@@ -28,15 +29,10 @@ app.post('/', function(req, res) {
       res.send('User added !')
     })
 })
-
+*/
 // Synchronize models
 models.sequelize.sync().then(function() {
-  /**
-   * Listen on provided port, on all network interfaces.
-   * 
-   * Listen only when database connection is sucessfull
-   */
-  app.listen(3000, function() {
+  app.listen(process.env.PORT, function() {
     console.log('Express server listening on port 3000');
   });
 });
