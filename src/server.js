@@ -31,6 +31,10 @@ app.post('/', function(req, res) {
 })
 */
 // Synchronize models
+
+app.get('/', function (req, res) {
+  console.log("Elo waurld")
+})
 models.sequelize.sync().then(function() {
   app.listen(process.env.PORT, function() {
     console.log('Express server listening on port 3000');
